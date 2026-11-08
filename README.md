@@ -10,6 +10,10 @@ measurement is a first-class entry with the same rank as a passing one. Rules:
 index + machine-readable feed: [`journal/README.md`](journal/README.md) /
 [[`journal/feed.jsonl`](journal/feed.jsonl). Anchor line (comparable over time): one V100
 SXM2-32GB, Qwen3.8-Flash-Next IQ3_XXS, 262,144 context, `--kv int8`, bit-exact sm_70 switches on.
+From 2026-11-08 there is also one **frozen auxiliary line** (line B: V100-PCIe-32GB at 250 W,
+IQ3_S, 131,072 context, [`configs/v100-pcie-iq3s-131k.json`](configs/v100-pcie-iq3s-131k.json)) used
+to check whether a tuning recipe travels between machines; it never moves the anchor and never
+inherits its numbers. Lines table: [journal/README.md → Hardware lines](journal/README.md).
 
 ## Hardware and software
 
@@ -128,6 +132,9 @@ Text, scripts, configs, results: MIT. Model weights, packs and NVIDIA components
 (готовый cuda12-движок из подписного фида), драйвер 580.178.04-server (последняя ветка с Volta),
 Ubuntu 22.04, 5600G, 96 ГБ RAM 3200. Правила журнала: append-only; неудачная запись = равноценная
 запись с признаком и обходом; якорная линия — IQ3_XXS/262K/`--kv int8`/бит-в-бит sm_70-тумблеры.
+С 2026-11-08 есть и **замороженная вспомогательная линия B** (V100-PCIe-32GB 250 Вт, IQ3_S,
+131 072, `configs/v100-pcie-iq3s-131k.json`) — она проверяет, переносится ли настройка между
+машинами; якорь она не двигает и его цифры не наследует. Таблица линий — в `journal/README.md`.
 
 **standard-v1 (протокол): complete, 21/21, sanity 12/12, n=3:** prefill **1280** (4k) / **1584**
 (16k) tok/s, decode **72.8** / **71.9**, короткий прогон 90.8, TTFT 0.7–10.4 с — верх community-
