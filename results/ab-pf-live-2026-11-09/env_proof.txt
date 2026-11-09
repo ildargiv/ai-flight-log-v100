@@ -1,0 +1,90 @@
+Environment proofs for entry №015.
+
+Correct proof target is the live engine process (`strata-host`, not the Python server,
+not the launcher, and not a shell command that contains the grep pattern itself):
+
+```bash
+pid=$(pgrep -x strata-host)
+tr '\0' '\n' < /proc/$pid/environ | grep '^STRATA_' | sort
+```
+
+Alternative when the process name is unavailable:
+
+```bash
+pid=$(ps -eo pid,args | awk '/[s]trata --serve/ && $2 !~ /bash/ {print $1; exit}')
+tr '\0' '\n' < /proc/$pid/environ | grep '^STRATA_' | sort
+```
+
+Arm 0.1.57 stock (PID 1002072):
+
+```text
+STRATA_ARGMAX_ROWS_SM70=1
+STRATA_FUSE_DECODE=1
+STRATA_GDN_CONVL2=2
+STRATA_GDN_TC=1
+STRATA_GR_NORM_FAST=1
+STRATA_HANDOVER=1
+STRATA_NO_ACQUIRE=1
+STRATA_RUNTIME_PROFILE=launch-lan-open
+STRATA_SM70_TABLE=1
+```
+
+No `STRATA_PF_WMMA`. This arm is therefore stock.
+
+Arm 0.1.57 + PF_WMMA (PID 1006776):
+
+```text
+STRATA_ARGMAX_ROWS_SM70=1
+STRATA_FUSE_DECODE=1
+STRATA_GDN_CONVL2=2
+STRATA_GDN_TC=1
+STRATA_GR_NORM_FAST=1
+STRATA_HANDOVER=1
+STRATA_NO_ACQUIRE=1
+STRATA_PF_WMMA=1
+STRATA_RUNTIME_PROFILE=launch-lan-open
+STRATA_SM70_TABLE=1
+```
+
+Bad 0.1.59 auto-start after update (PID 1015126):
+
+```text
+STRATA_GDN_CONVL2=2
+STRATA_GDN_TC=1
+STRATA_HANDOVER=1
+STRATA_NO_ACQUIRE=1
+STRATA_ROUTE_PRIOR=1.5
+STRATA_RUNTIME_PROFILE=launch-iq3_xxs-256k
+```
+
+No PF_WMMA, no sm_70 keys, wrong runtime profile. This engine was stopped before any
+speed measurement.
+
+Arm 0.1.59 stock (PID 1023584):
+
+```text
+STRATA_ARGMAX_ROWS_SM70=1
+STRATA_FUSE_DECODE=1
+STRATA_GR_NORM_FAST=1
+STRATA_PF_WMMA=0
+STRATA_SM70_TABLE=1
+```
+
+Explicit zero is treated as stock/off.
+
+Arm 0.1.59 + PF_WMMA (PID 1027110):
+
+```text
+STRATA_ARGMAX_ROWS_SM70=1
+STRATA_FUSE_DECODE=1
+STRATA_GR_NORM_FAST=1
+STRATA_PF_WMMA=1
+STRATA_SM70_TABLE=1
+```
+
+Final live state after the A/B:
+
+```text
+engine 0.1.59, profile launch-lan-open, STRATA_PF_WMMA=1
+metrics: version 0.1.59, expert_slots 15289, expert_cache_mib 25407, vram_free_mib 798
+```

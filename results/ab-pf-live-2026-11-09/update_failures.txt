@@ -1,0 +1,104 @@
+Update/launch failure evidence for entry №015.
+
+## 1. `strata components install-file` self-test deadlock
+
+First attempt with local signed package:
+
+```text
+  Unpacking the engine file
+  Checking the package signature and every file
+  Test-starting engine 0.1.59 linux-x86_64-cuda-cuda12 before switching to it
+  Engine 0.1.59 is loading the model (1 s)
+  Engine 0.1.59 is loading the model (31 s)
+  Engine 0.1.59 is loading the model (61 s)
+  Engine 0.1.59 has loaded the model; waiting for it to answer one token (67 s)
+strata: Strata's own launch is using the graphics card. Stop the model first (`strata launch --stop`), then run `strata update` again. Nothing was changed.
+```
+
+Second attempt after `strata launch --stop` and with `--wait 30`:
+
+```text
+  Test-starting engine 0.1.59 linux-x86_64-cuda-cuda12 before switching to it
+  Engine 0.1.59 is loading the model (1 s)
+  Engine 0.1.59 is loading the model (31 s)
+  Engine 0.1.59 has loaded the model; waiting for it to answer one token (59 s)
+  An engine is serving; waiting for it to stop before updating.
+  An engine is serving; waiting for it to stop before updating.
+  ...
+strata: Strata's own launch is using the graphics card. Stop the model first (`strata launch --stop`), then run `strata update` again. Nothing was changed.
+```
+
+Observed state after the failed command:
+
+```text
+GPU memory: 5 MiB used
+strata components engines: 0.1.57 ... in use, newest
+```
+
+Local package identity:
+
+```text
+sha256 4bf321cb0c2d7ff15fe221f22a29aeb8371f24fa77a4425c920eb01a520babbc
+strata-engine-0.1.59-linux-x86_64-cuda-cuda12.tar.gz
+```
+
+Workaround that worked:
+
+```bash
+strata update --force --no-control --stop-model --start-again --yes
+```
+
+Success log tail:
+
+```text
+  Engine 0.1.59 has loaded the model; waiting for it to answer one token (58 s)
+  Switching to engine 0.1.59 linux-x86_64-cuda-cuda12
+  Engine 0.1.59 is installed and will be used on the next start
+Engine  0.1.57 -> 0.1.59   updated (tested: started, answered one token, stopped)
+The previous engine version is kept; `strata components rollback` returns to it.
+Starting qwen3.8-flash-next-iq3_xxs (port 8080) again (loading can take a few minutes)...
+qwen3.8-flash-next-iq3_xxs (port 8080) is serving again with the same settings.
+```
+
+## 2. `--start-again` chose the wrong profile
+
+Immediately after the successful update, the live server on port 8080 was 0.1.59 but
+served through the wrong run config:
+
+```text
+serve.server --engine strata --config <launch>/iq3_xxs-256k.json --host 0.0.0.0 --port 8080
+```
+
+Engine process env showed:
+
+```text
+STRATA_RUNTIME_PROFILE=launch-iq3_xxs-256k
+STRATA_ROUTE_PRIOR=1.5
+```
+
+and lacked the profile sm_70 keys and `STRATA_PF_WMMA`. The `iq3_xxs-256k` engine started
+line also lacked `--conversation-cache-*` and `--prompt-cache`. It was stopped and the
+correct profile was started fresh.
+
+## 3. PF_WMMA dropped by auto-start/migration
+
+After restarting 0.1.59 with the correct profile and proof, a later `start-again` path
+left `lan-open.json` env with only:
+
+```json
+{
+ "STRATA_ARGMAX_ROWS_SM70": "1",
+ "STRATA_FUSE_DECODE": "1",
+ "STRATA_GR_NORM_FAST": "1",
+ "STRATA_SM70_TABLE": "1"
+}
+```
+
+and live environ had no `STRATA_PF_WMMA`. Fixed by explicit fresh launch:
+
+```bash
+ulimit -l 8192
+strata launch --preset lan-open --yes --no-tui --set STRATA_PF_WMMA=1
+```
+
+Proof after final start contains `STRATA_PF_WMMA=1`.
