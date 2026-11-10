@@ -1,0 +1,24 @@
+{
+  "_note": "V100-PCIE-32GB + Qwen3.8-Flash-Next IQ3_S, engine 0.1.56-cuda12 (entry 014). The five sm_70 switches travel through the run config's `env` block: a fresh start applies them, a migration/restart does not pick up new keys (RULES #9). Paths are placeholders; keep your own.",
+  "env": {
+    "STRATA_SM70_TABLE": "1",
+    "STRATA_FUSE_DECODE": "1",
+    "STRATA_ARGMAX_ROWS_SM70": "1",
+    "STRATA_GR_NORM_FAST": "1",
+    "STRATA_PF_WMMA": "1"
+  },
+  "args": [
+    "--pack", "<data>/packs/iq3_s",
+    "--native", "<data>/models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+    "--ple-gguf", "<data>/models/IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+    "--expert-profile", "<strata>/data/expert-profile.bin",
+    "--expert-cache", "auto",
+    "--prefill", "auto",
+    "--spec", "4",
+    "--mtp", "<data>/mtp/rt",
+    "--max-context", "131072",
+    "--kv", "int8",
+    "--vram-reserve-mib", "1280",
+    "--spec-min-p", "0.5"
+  ]
+}

@@ -1,0 +1,24 @@
+{"round": 0, "arm": "A", "req": "chat0", "decode": 68.9, "prompt": 80.2, "prompt_n": 34, "n": 256, "text": "```python\ndef merge_sorted_lists(list1: list, list2: list) -> list:\n    \"\"\"\n    "}
+{"round": 0, "arm": "A", "req": "chat1", "decode": 66.7, "prompt": 73.6, "prompt_n": 27, "n": 256, "text": "A refrigerator operates by utilizing a closed-loop system containing a specializ"}
+{"round": 0, "arm": "A", "req": "chat2", "decode": 68.1, "prompt": 80.4, "prompt_n": 29, "n": 215, "text": "1. Set specific, achievable goals to maintain motivation and track your progress"}
+{"round": 0, "arm": "A", "req": "long", "decode": 69.6, "prompt": 1387.7, "prompt_n": 6345, "n": 151, "text": "The list is composed entirely of single-word nouns that evoke a variety of natur"}
+{"round": 0, "arm": "B", "req": "chat0", "decode": 75.4, "prompt": 83.3, "prompt_n": 34, "n": 256, "text": "```python\ndef merge_sorted_lists(list1: list, list2: list) -> list:\n    \"\"\"\n    "}
+{"round": 0, "arm": "B", "req": "chat1", "decode": 75.7, "prompt": 74.9, "prompt_n": 27, "n": 256, "text": "A refrigerator operates by utilizing a closed-loop system containing a specializ"}
+{"round": 0, "arm": "B", "req": "chat2", "decode": 72.7, "prompt": 82.3, "prompt_n": 29, "n": 215, "text": "1. Set specific, achievable goals to maintain motivation and track your progress"}
+{"round": 0, "arm": "B", "req": "long", "decode": 68.3, "prompt": 1384.0, "prompt_n": 6345, "n": 127, "text": "The list is composed entirely of single-word nouns that evoke a variety of natur"}
+{"round": 1, "arm": "B", "req": "chat0", "decode": 73.1, "prompt": 83.4, "prompt_n": 34, "n": 256, "text": "```python\ndef merge_sorted_lists(list1: list, list2: list) -> list:\n    \"\"\"\n    "}
+{"round": 1, "arm": "B", "req": "chat1", "decode": 70.7, "prompt": 73.7, "prompt_n": 27, "n": 256, "text": "A refrigerator operates by utilizing a closed-loop system containing a specializ"}
+{"round": 1, "arm": "B", "req": "chat2", "decode": 73.0, "prompt": 82.0, "prompt_n": 29, "n": 211, "text": "1. Set specific, achievable goals to maintain motivation and track your progress"}
+{"round": 1, "arm": "B", "req": "long", "decode": 71.7, "prompt": 1382.2, "prompt_n": 6345, "n": 142, "text": "The list is composed entirely of single-word nouns that evoke a variety of natur"}
+{"round": 1, "arm": "A", "req": "chat0", "decode": 65.5, "prompt": 79.3, "prompt_n": 34, "n": 256, "text": "```python\ndef merge_sorted_lists(list1: list, list2: list) -> list:\n    \"\"\"\n    "}
+{"round": 1, "arm": "A", "req": "chat1", "decode": 65.1, "prompt": 69.2, "prompt_n": 27, "n": 256, "text": "A refrigerator operates by utilizing a closed-loop system containing a specializ"}
+{"round": 1, "arm": "A", "req": "chat2", "decode": 69.2, "prompt": 80.0, "prompt_n": 29, "n": 211, "text": "1. Set specific, achievable goals to maintain motivation and track your progress"}
+{"round": 1, "arm": "A", "req": "long", "decode": 64.4, "prompt": 1349.7, "prompt_n": 6345, "n": 151, "text": "The list is composed entirely of single-word nouns that evoke a variety of natur"}
+{"round": 2, "arm": "A", "req": "chat0", "decode": 69.1, "prompt": 80.1, "prompt_n": 34, "n": 256, "text": "```python\ndef merge_sorted_lists(list1: list, list2: list) -> list:\n    \"\"\"\n    "}
+{"round": 2, "arm": "A", "req": "chat1", "decode": 70.1, "prompt": 71.8, "prompt_n": 27, "n": 256, "text": "A refrigerator operates by utilizing a closed-loop system containing a specializ"}
+{"round": 2, "arm": "A", "req": "chat2", "decode": 68.3, "prompt": 79.4, "prompt_n": 29, "n": 211, "text": "1. Set specific, achievable goals to maintain motivation and track your progress"}
+{"round": 2, "arm": "A", "req": "long", "decode": 61.7, "prompt": 1273.4, "prompt_n": 6345, "n": 142, "text": "The list is composed entirely of single-word nouns that evoke a variety of natur"}
+{"round": 2, "arm": "B", "req": "chat0", "decode": 71.6, "prompt": 81.2, "prompt_n": 34, "n": 256, "text": "```python\ndef merge_sorted_lists(list1: list, list2: list) -> list:\n    \"\"\"\n    "}
+{"round": 2, "arm": "B", "req": "chat1", "decode": 71.6, "prompt": 73.9, "prompt_n": 27, "n": 256, "text": "A refrigerator operates by utilizing a closed-loop system containing a specializ"}
+{"round": 2, "arm": "B", "req": "chat2", "decode": 73.5, "prompt": 80.7, "prompt_n": 29, "n": 205, "text": "1. Set specific, achievable goals to maintain motivation and track your progress"}
+{"round": 2, "arm": "B", "req": "long", "decode": 67.9, "prompt": 1321.1, "prompt_n": 6345, "n": 155, "text": "The list is composed entirely of single-word nouns that evoke a variety of natur"}
