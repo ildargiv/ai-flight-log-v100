@@ -1,0 +1,27 @@
+﻿# Engine log excerpt: fresh-read arms of the 2026-11-20 context sweep (strata-maya-ds4.log)
+# Each line: prompt tokens = reused + read in ms (prefill tok/s), generated in ms (decode tok/s); CPU lane %
+
+maya ds4 serve: prompt 1024 tokens = 0 reused + 1024 read in 6391 ms (160.2 tok/s), 168 generated in 15444 ms (10.88 tok/s); CPU lane 3.5% of the experts
+maya ds4 serve: prompt 1024 tokens = 0 reused + 1024 read in 6372 ms (160.7 tok/s), 171 generated in 14001 ms (12.21 tok/s); CPU lane 3.5% of the experts
+maya ds4 serve: prompt 1024 tokens = 0 reused + 1024 read in 6393 ms (160.2 tok/s), 256 generated in 18680 ms (13.70 tok/s); CPU lane 3.6% of the experts
+maya ds4 serve: prompt 1024 tokens = 0 reused + 1024 read in 6389 ms (160.3 tok/s), 256 generated in 21284 ms (12.03 tok/s); CPU lane 3.7% of the experts
+maya ds4 serve: prompt 4079 tokens = 0 reused + 4079 read in 14980 ms (272.3 tok/s), 256 generated in 19002 ms (13.47 tok/s); CPU lane 3.6% of the experts
+maya ds4 serve: prompt 4079 tokens = 0 reused + 4079 read in 15060 ms (270.8 tok/s), 127 generated in 9638 ms (13.18 tok/s); CPU lane 3.4% of the experts
+maya ds4 serve: prompt 4079 tokens = 0 reused + 4079 read in 15124 ms (269.7 tok/s), 127 generated in 9615 ms (13.21 tok/s); CPU lane 3.2% of the experts
+maya ds4 serve: prompt 4079 tokens = 0 reused + 4079 read in 15127 ms (269.6 tok/s), 214 generated in 16720 ms (12.80 tok/s); CPU lane 3.1% of the experts
+maya ds4 serve: prompt 16385 tokens = 0 reused + 16385 read in 35020 ms (467.9 tok/s), 205 generated in 15987 ms (12.82 tok/s); CPU lane 2.7% of the experts
+maya ds4 serve: prompt 16385 tokens = 0 reused + 16385 read in 35093 ms (466.9 tok/s), 228 generated in 20167 ms (11.31 tok/s); CPU lane 2.5% of the experts
+maya ds4 serve: prompt 16385 tokens = 0 reused + 16385 read in 34832 ms (470.4 tok/s), 256 generated in 22608 ms (11.32 tok/s); CPU lane 2.4% of the experts
+maya ds4 serve: prompt 16385 tokens = 0 reused + 16385 read in 34945 ms (468.9 tok/s), 256 generated in 21782 ms (11.75 tok/s); CPU lane 2.2% of the experts
+maya ds4 serve: prompt 32754 tokens = 0 reused + 32754 read in 67635 ms (484.3 tok/s), 156 generated in 12488 ms (12.49 tok/s); CPU lane 1.9% of the experts
+maya ds4 serve: prompt 32754 tokens = 0 reused + 32754 read in 66526 ms (492.3 tok/s), 219 generated in 20700 ms (10.58 tok/s); CPU lane 1.7% of the experts
+maya ds4 serve: prompt 32754 tokens = 0 reused + 32754 read in 65924 ms (496.8 tok/s), 177 generated in 15597 ms (11.35 tok/s); CPU lane 1.6% of the experts
+maya ds4 serve: prompt 32754 tokens = 0 reused + 32754 read in 66387 ms (493.4 tok/s), 256 generated in 22227 ms (11.52 tok/s); CPU lane 1.5% of the experts
+maya ds4 serve: prompt 65520 tokens = 0 reused + 65520 read in 112431 ms (582.8 tok/s), 208 generated in 17792 ms (11.69 tok/s); CPU lane 1.3% of the experts
+maya ds4 serve: prompt 65520 tokens = 0 reused + 65520 read in 112187 ms (584.0 tok/s), 43 generated in 4920 ms (8.74 tok/s); CPU lane 1.1% of the experts
+maya ds4 serve: prompt 65520 tokens = 0 reused + 65520 read in 112153 ms (584.2 tok/s), 245 generated in 20571 ms (11.91 tok/s); CPU lane 1.0% of the experts
+maya ds4 serve: prompt 65520 tokens = 0 reused + 65520 read in 112142 ms (584.3 tok/s), 212 generated in 18615 ms (11.39 tok/s); CPU lane 0.9% of the experts
+maya ds4 serve: prompt 131055 tokens = 0 reused + 131055 read in 208830 ms (627.6 tok/s), 128 generated in 12765 ms (10.03 tok/s); CPU lane 0.8% of the experts
+maya ds4 serve: prompt 131055 tokens = 0 reused + 131055 read in 209845 ms (624.5 tok/s), 182 generated in 16991 ms (10.71 tok/s); CPU lane 0.7% of the experts
+maya ds4 serve: prompt 131055 tokens = 0 reused + 131055 read in 209134 ms (626.7 tok/s), 181 generated in 16371 ms (11.06 tok/s); CPU lane 0.6% of the experts
+maya ds4 serve: prompt 131055 tokens = 0 reused + 131055 read in 209133 ms (626.7 tok/s), 256 generated in 25745 ms (9.94 tok/s); CPU lane 0.5% of the experts

@@ -1,0 +1,22 @@
+{
+  "exe": "<home>/build/build-dsv41/strata-dsv41 (strata-dsv41 0.1.59 build 712fec6b4, source build for sm_70 / CUDA 12.9.1)",
+  "args": [
+    "--pack", "<home>/Models/DeepSeek-V4.1-Flash/maya-ds4",
+    "--gpus", "0",
+    "--max-context", "260000",
+    "--cpu-threads", "16",
+    "--dspark", "auto",
+    "--eos", "1"
+  ],
+  "cwd": "<home>/build/Strata-0.2.13",
+  "tokenizer": "<home>/Models/DeepSeek-V4.1-Flash/maya-ds4/tokenizer",
+  "model_name": "deepseek-v4.1-flash-iq2xxs",
+  "arch": "deepseek41",
+  "port": 8080,
+  "host": "0.0.0.0",
+  "lazy_load": false,
+  "idle_unload_s": 0,
+  "open_browser": false,
+  "sha256_of_original": "c42997ae66197330fe8bc4ad5512d592d03f057632722e483b98e84a3dc1427e",
+  "notes": "Home paths redacted. Model components + pack symlinked from a second NVMe mounted at /mnt/nvme. No API key on the benchmark endpoint (local/Tailscale only). Original config sha256 includes home paths (not published verbatim here)."
+}
