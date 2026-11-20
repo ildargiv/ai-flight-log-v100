@@ -4,6 +4,11 @@ Measured on 2026-11-05 by **ildargiv**, ongoing. Third card in the fleet line:
 [rtx3060-strata-tuning](https://github.com/ildargiv/rtx3060-strata-tuning) →
 [cmp90hx-strata-tuning](https://github.com/ildargiv/cmp90hx-strata-tuning) → this one.
 
+**Community testing:** we publish the exact rules for measuring DeepSeek-V4.1-Flash
+(IQ2_XXS, 2.00 bpw) on Strata and invite your numbers — see [`TESTING_RULES.md`](TESTING_RULES.md)
+and [`outreach/call-for-testers.md`](outreach/call-for-testers.md). Your GPU does not have to be a
+V100; one context length is enough, and a failed run is a valid entry.
+
 This repo is a **flight log**, not a one-shot benchmark: dated entries, append-only, and a failed
 measurement is a first-class entry with the same rank as a passing one. Rules:
 [[`RULES.md`](RULES.md), template: [[`TEMPLATE.md`](TEMPLATE.md),
