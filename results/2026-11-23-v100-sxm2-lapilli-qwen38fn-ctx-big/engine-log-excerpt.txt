@@ -1,0 +1,17 @@
+# lapilli-v100 / basalt serve log excerpt (no per-request engine timing lines captured by bench script)
+# source: /home/omarchy/build/lapilli-v100/lapilli-serve-262k.log
+# bench: /home/omarchy/build/bench-lapilli-qwen38fn-ctx-big/results.json
+# note: engine timings recorded from SSE timings in results.json; reused_tokens==0 for all rows.
+
+[arm=32768 run=1 nonce=1795381410-32768-r1] prompt_tokens=32757 reused=0 read=32757 gen=256 prompt_tps=1637.4 decode_tps=78.0 ttft_s=20.085 drafts=173/222 err=None
+[arm=32768 run=2 nonce=1795381410-32768-r2] prompt_tokens=32757 reused=0 read=32757 gen=256 prompt_tps=1564.3 decode_tps=68.7 ttft_s=21.12 drafts=171/232 err=None
+[arm=32768 run=3 nonce=1795381410-32768-r3] prompt_tokens=32757 reused=0 read=32757 gen=256 prompt_tps=1529.7 decode_tps=85.5 ttft_s=21.494 drafts=188/226 err=None
+[arm=32768 run=4 nonce=1795381410-32768-r4] prompt_tokens=32757 reused=0 read=32757 gen=256 prompt_tps=1535.1 decode_tps=89.6 ttft_s=21.486 drafts=194/239 err=None
+[arm=65536 run=1 nonce=1795381410-65536-r1] prompt_tokens=65539 reused=0 read=65539 gen=256 prompt_tps=1471.9 decode_tps=78.8 ttft_s=44.612 drafts=178/221 err=None
+[arm=65536 run=2 nonce=1795381410-65536-r2] prompt_tokens=65539 reused=0 read=65539 gen=256 prompt_tps=1474.9 decode_tps=69.8 ttft_s=44.57 drafts=172/222 err=None
+[arm=65536 run=3 nonce=1795381410-65536-r3] prompt_tokens=65539 reused=0 read=65539 gen=256 prompt_tps=1469.6 decode_tps=77.0 ttft_s=44.703 drafts=183/224 err=None
+[arm=65536 run=4 nonce=1795381410-65536-r4] prompt_tokens=65539 reused=0 read=65539 gen=256 prompt_tps=1467.4 decode_tps=80.7 ttft_s=44.76 drafts=178/220 err=None
+[arm=131072 run=1 nonce=1795381410-131072-r1] prompt_tokens=131066 reused=0 read=131066 gen=256 prompt_tps=1331.5 decode_tps=68.9 ttft_s=98.594 drafts=177/217 err=None
+[arm=131072 run=2 nonce=1795381410-131072-r2] prompt_tokens=131066 reused=0 read=131066 gen=256 prompt_tps=1327.3 decode_tps=73.4 ttft_s=98.865 drafts=173/225 err=None
+[arm=131072 run=3 nonce=1795381410-131072-r3] prompt_tokens=131066 reused=0 read=131066 gen=256 prompt_tps=1327.9 decode_tps=71.6 ttft_s=98.835 drafts=175/218 err=None
+[arm=131072 run=4 nonce=1795381410-131072-r4] prompt_tokens=131066 reused=0 read=131066 gen=256 prompt_tps=1338.5 decode_tps=70.9 ttft_s=98.035 drafts=178/224 err=None

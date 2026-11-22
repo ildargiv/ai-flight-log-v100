@@ -1,0 +1,17 @@
+# lapilli-v100 / basalt serve log excerpt (no per-request engine timing lines captured by bench script)
+# source: /home/omarchy/build/lapilli-v100/lapilli-serve.log
+# bench: /home/omarchy/build/bench-lapilli-qwen38fn-ctx/results.json
+# note: engine timings (prompt_per_second, predicted_per_second, draft_n, draft_n_accepted) recorded from SSE timings in results.json; reused_tokens==0 for all rows.
+
+[arm=1024 run=1 nonce=1795378410-1024-r1 prompt_tokens=1228] [server] s1 done  pp=1228/0c 2.1s 580t/s  tg=256 65.7t/s acc=88%  ttft=2.2s  end=length  hit=79.7%  pcie=0.0%
+[arm=1024 run=2 nonce=1795378410-1024-r2 prompt_tokens=1228] [server] s1 done  pp=1228/0c 1.9s 659t/s  tg=256 82.3t/s acc=77%  ttft=2.0s  end=length  hit=88.7%  pcie=0.0%
+[arm=1024 run=3 nonce=1795378410-1024-r3 prompt_tokens=1228] [server] s1 done  pp=1228/0c 1.8s 674t/s  tg=256 84.9t/s acc=80%  ttft=1.9s  end=length  hit=88.9%  pcie=0.0%
+[arm=1024 run=4 nonce=1795378410-1024-r4 prompt_tokens=1228] [server] s1 done  pp=1228/0c 1.9s 658t/s  tg=256 84.4t/s acc=75%  ttft=2.0s  end=length  hit=89.3%  pcie=0.0%
+[arm=4096 run=1 nonce=1795378410-4096-r1 prompt_tokens=4908] [server] s1 done  pp=4908/0c 4.4s 1108t/s  tg=256 91.8t/s acc=85%  ttft=4.6s  end=length  hit=89.9%  pcie=0.0%
+[arm=4096 run=2 nonce=1795378410-4096-r2 prompt_tokens=4908] [server] s1 done  pp=4908/0c 4.4s 1107t/s  tg=256 94.5t/s acc=85%  ttft=4.5s  end=length  hit=90.8%  pcie=0.0%
+[arm=4096 run=3 nonce=1795378410-4096-r3 prompt_tokens=4908] [server] s1 done  pp=4908/0c 4.4s 1113t/s  tg=256 93.6t/s acc=84%  ttft=4.5s  end=length  hit=91.0%  pcie=0.0%
+[arm=4096 run=4 nonce=1795378410-4096-r4 prompt_tokens=4908] [server] s1 done  pp=4908/0c 4.5s 1102t/s  tg=256 96.3t/s acc=88%  ttft=4.6s  end=length  hit=90.4%  pcie=0.0%
+[arm=6144 run=1 nonce=1795378410-6144-r1 prompt_tokens=7370] [server] s1 done  pp=7370/0c 5.4s 1374t/s  tg=256 83.3t/s acc=78%  ttft=5.4s  end=length  hit=89.0%  pcie=0.0%
+[arm=6144 run=2 nonce=1795378410-6144-r2 prompt_tokens=7370] [server] s1 done  pp=7370/0c 5.4s 1356t/s  tg=256 83.9t/s acc=84%  ttft=5.5s  end=length  hit=88.1%  pcie=0.0%
+[arm=6144 run=3 nonce=1795378410-6144-r3 prompt_tokens=7370] [server] s1 done  pp=7370/0c 5.5s 1345t/s  tg=256 88.4t/s acc=88%  ttft=5.6s  end=length  hit=88.8%  pcie=0.0%
+[arm=6144 run=4 nonce=1795378410-6144-r4 prompt_tokens=7370] [server] s1 done  pp=7370/0c 5.5s 1334t/s  tg=256 88.3t/s acc=84%  ttft=5.6s  end=length  hit=89.5%  pcie=0.0%

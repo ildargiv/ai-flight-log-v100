@@ -1,0 +1,440 @@
+{
+  "meta": {
+    "date": "2026-11-22",
+    "base": "http://127.0.0.1:8080",
+    "model": "Qwen3.8-Flash-Next UD-Q4_K_XL",
+    "cap": 256,
+    "runs": 4,
+    "sizes": [
+      1024,
+      4096,
+      6144
+    ],
+    "slope": 15.3,
+    "overhead": 20.0,
+    "timings_source": "engine (timings in last SSE chunk)",
+    "ttft_source": "client monotonic clock, first non-empty content",
+    "thinking": "off (chat_template_kwargs.enable_thinking=false)"
+  },
+  "summary": {
+    "1024": {
+      "prompt_tokens": {
+        "median": 1228.0,
+        "min": 1228,
+        "max": 1228,
+        "n": 4
+      },
+      "reused_tokens": {
+        "median": 0.0,
+        "min": 0,
+        "max": 0,
+        "n": 4
+      },
+      "read_tokens": {
+        "median": 1228.0,
+        "min": 1228,
+        "max": 1228,
+        "n": 4
+      },
+      "generated_tokens": {
+        "median": 256.0,
+        "min": 256,
+        "max": 256,
+        "n": 4
+      },
+      "prompt_tps": {
+        "median": 658.4,
+        "min": 579.9,
+        "max": 674.2,
+        "n": 4
+      },
+      "decode_tps": {
+        "median": 83.35,
+        "min": 65.7,
+        "max": 84.9,
+        "n": 4
+      },
+      "ttft_s": {
+        "median": 1.96,
+        "min": 1.94,
+        "max": 2.16,
+        "n": 4
+      },
+      "total_s": {
+        "median": 4.96,
+        "min": 4.88,
+        "max": 6.02,
+        "n": 4
+      },
+      "cpu_lane_pct": null
+    },
+    "4096": {
+      "prompt_tokens": {
+        "median": 4908.0,
+        "min": 4908,
+        "max": 4908,
+        "n": 4
+      },
+      "reused_tokens": {
+        "median": 0.0,
+        "min": 0,
+        "max": 0,
+        "n": 4
+      },
+      "read_tokens": {
+        "median": 4908.0,
+        "min": 4908,
+        "max": 4908,
+        "n": 4
+      },
+      "generated_tokens": {
+        "median": 256.0,
+        "min": 256,
+        "max": 256,
+        "n": 4
+      },
+      "prompt_tps": {
+        "median": 1107.4,
+        "min": 1102.0,
+        "max": 1112.6,
+        "n": 4
+      },
+      "decode_tps": {
+        "median": 94.05,
+        "min": 91.8,
+        "max": 96.3,
+        "n": 4
+      },
+      "ttft_s": {
+        "median": 4.55,
+        "min": 4.51,
+        "max": 4.58,
+        "n": 4
+      },
+      "total_s": {
+        "median": 7.16,
+        "min": 7.14,
+        "max": 7.29,
+        "n": 4
+      },
+      "cpu_lane_pct": null
+    },
+    "6144": {
+      "prompt_tokens": {
+        "median": 7370.0,
+        "min": 7370,
+        "max": 7370,
+        "n": 4
+      },
+      "reused_tokens": {
+        "median": 0.0,
+        "min": 0,
+        "max": 0,
+        "n": 4
+      },
+      "read_tokens": {
+        "median": 7370.0,
+        "min": 7370,
+        "max": 7370,
+        "n": 4
+      },
+      "generated_tokens": {
+        "median": 256.0,
+        "min": 256,
+        "max": 256,
+        "n": 4
+      },
+      "prompt_tps": {
+        "median": 1350.25,
+        "min": 1334.5,
+        "max": 1374.3,
+        "n": 4
+      },
+      "decode_tps": {
+        "median": 86.1,
+        "min": 83.3,
+        "max": 88.4,
+        "n": 4
+      },
+      "ttft_s": {
+        "median": 5.57,
+        "min": 5.43,
+        "max": 5.6,
+        "n": 4
+      },
+      "total_s": {
+        "median": 8.43,
+        "min": 8.43,
+        "max": 8.52,
+        "n": 4
+      },
+      "cpu_lane_pct": null
+    }
+  },
+  "rows": [
+    {
+      "arm": "1024",
+      "run": 1,
+      "nonce": "1795378410-1024-r1",
+      "target_tokens": 1024,
+      "ok": true,
+      "err": null,
+      "prompt_tokens": 1228,
+      "reused_tokens": 0,
+      "read_tokens": 1228,
+      "generated_tokens": 256,
+      "prompt_tps": 579.9,
+      "decode_tps": 65.7,
+      "prompt_ms": 2117.7,
+      "decode_ms": 3894.4,
+      "ttft_s": 2.158,
+      "total_s": 6.016,
+      "drafts_offered": 213,
+      "drafts_accepted": 188,
+      "cpu_lane_pct": null,
+      "engine_log_line": "[server] s1 done  pp=1228/0c 2.1s 580t/s  tg=256 65.7t/s acc=88%  ttft=2.2s  end=length  hit=79.7%  pcie=0.0%"
+    },
+    {
+      "arm": "1024",
+      "run": 2,
+      "nonce": "1795378410-1024-r2",
+      "target_tokens": 1024,
+      "ok": true,
+      "err": null,
+      "prompt_tokens": 1228,
+      "reused_tokens": 0,
+      "read_tokens": 1228,
+      "generated_tokens": 256,
+      "prompt_tps": 659.0,
+      "decode_tps": 82.3,
+      "prompt_ms": 1863.5,
+      "decode_ms": 3109.2,
+      "ttft_s": 1.958,
+      "total_s": 4.998,
+      "drafts_offered": 235,
+      "drafts_accepted": 181,
+      "cpu_lane_pct": null,
+      "engine_log_line": "[server] s1 done  pp=1228/0c 1.9s 659t/s  tg=256 82.3t/s acc=77%  ttft=2.0s  end=length  hit=88.7%  pcie=0.0%"
+    },
+    {
+      "arm": "1024",
+      "run": 3,
+      "nonce": "1795378410-1024-r3",
+      "target_tokens": 1024,
+      "ok": true,
+      "err": null,
+      "prompt_tokens": 1228,
+      "reused_tokens": 0,
+      "read_tokens": 1228,
+      "generated_tokens": 256,
+      "prompt_tps": 674.2,
+      "decode_tps": 84.9,
+      "prompt_ms": 1821.5,
+      "decode_ms": 3013.8,
+      "ttft_s": 1.939,
+      "total_s": 4.878,
+      "drafts_offered": 224,
+      "drafts_accepted": 179,
+      "cpu_lane_pct": null,
+      "engine_log_line": "[server] s1 done  pp=1228/0c 1.8s 674t/s  tg=256 84.9t/s acc=80%  ttft=1.9s  end=length  hit=88.9%  pcie=0.0%"
+    },
+    {
+      "arm": "1024",
+      "run": 4,
+      "nonce": "1795378410-1024-r4",
+      "target_tokens": 1024,
+      "ok": true,
+      "err": null,
+      "prompt_tokens": 1228,
+      "reused_tokens": 0,
+      "read_tokens": 1228,
+      "generated_tokens": 256,
+      "prompt_tps": 657.8,
+      "decode_tps": 84.4,
+      "prompt_ms": 1866.8,
+      "decode_ms": 3032.7,
+      "ttft_s": 1.964,
+      "total_s": 4.924,
+      "drafts_offered": 240,
+      "drafts_accepted": 179,
+      "cpu_lane_pct": null,
+      "engine_log_line": "[server] s1 done  pp=1228/0c 1.9s 658t/s  tg=256 84.4t/s acc=75%  ttft=2.0s  end=length  hit=89.3%  pcie=0.0%"
+    },
+    {
+      "arm": "4096",
+      "run": 1,
+      "nonce": "1795378410-4096-r1",
+      "target_tokens": 4096,
+      "ok": true,
+      "err": null,
+      "prompt_tokens": 4908,
+      "reused_tokens": 0,
+      "read_tokens": 4908,
+      "generated_tokens": 256,
+      "prompt_tps": 1107.9,
+      "decode_tps": 91.8,
+      "prompt_ms": 4429.9,
+      "decode_ms": 2788.8,
+      "ttft_s": 4.583,
+      "total_s": 7.292,
+      "drafts_offered": 216,
+      "drafts_accepted": 184,
+      "cpu_lane_pct": null,
+      "engine_log_line": "[server] s1 done  pp=4908/0c 4.4s 1108t/s  tg=256 91.8t/s acc=85%  ttft=4.6s  end=length  hit=89.9%  pcie=0.0%"
+    },
+    {
+      "arm": "4096",
+      "run": 2,
+      "nonce": "1795378410-4096-r2",
+      "target_tokens": 4096,
+      "ok": true,
+      "err": null,
+      "prompt_tokens": 4908,
+      "reused_tokens": 0,
+      "read_tokens": 4908,
+      "generated_tokens": 256,
+      "prompt_tps": 1106.9,
+      "decode_tps": 94.5,
+      "prompt_ms": 4434.2,
+      "decode_ms": 2708.5,
+      "ttft_s": 4.533,
+      "total_s": 7.147,
+      "drafts_offered": 221,
+      "drafts_accepted": 187,
+      "cpu_lane_pct": null,
+      "engine_log_line": "[server] s1 done  pp=4908/0c 4.4s 1107t/s  tg=256 94.5t/s acc=85%  ttft=4.5s  end=length  hit=90.8%  pcie=0.0%"
+    },
+    {
+      "arm": "4096",
+      "run": 3,
+      "nonce": "1795378410-4096-r3",
+      "target_tokens": 4096,
+      "ok": true,
+      "err": null,
+      "prompt_tokens": 4908,
+      "reused_tokens": 0,
+      "read_tokens": 4908,
+      "generated_tokens": 256,
+      "prompt_tps": 1112.6,
+      "decode_tps": 93.6,
+      "prompt_ms": 4411.3,
+      "decode_ms": 2735.9,
+      "ttft_s": 4.512,
+      "total_s": 7.17,
+      "drafts_offered": 210,
+      "drafts_accepted": 177,
+      "cpu_lane_pct": null,
+      "engine_log_line": "[server] s1 done  pp=4908/0c 4.4s 1113t/s  tg=256 93.6t/s acc=84%  ttft=4.5s  end=length  hit=91.0%  pcie=0.0%"
+    },
+    {
+      "arm": "4096",
+      "run": 4,
+      "nonce": "1795378410-4096-r4",
+      "target_tokens": 4096,
+      "ok": true,
+      "err": null,
+      "prompt_tokens": 4908,
+      "reused_tokens": 0,
+      "read_tokens": 4908,
+      "generated_tokens": 256,
+      "prompt_tps": 1102.0,
+      "decode_tps": 96.3,
+      "prompt_ms": 4453.6,
+      "decode_ms": 2657.7,
+      "ttft_s": 4.573,
+      "total_s": 7.14,
+      "drafts_offered": 213,
+      "drafts_accepted": 187,
+      "cpu_lane_pct": null,
+      "engine_log_line": "[server] s1 done  pp=4908/0c 4.5s 1102t/s  tg=256 96.3t/s acc=88%  ttft=4.6s  end=length  hit=90.4%  pcie=0.0%"
+    },
+    {
+      "arm": "6144",
+      "run": 1,
+      "nonce": "1795378410-6144-r1",
+      "target_tokens": 6144,
+      "ok": true,
+      "err": null,
+      "prompt_tokens": 7370,
+      "reused_tokens": 0,
+      "read_tokens": 7370,
+      "generated_tokens": 256,
+      "prompt_tps": 1374.3,
+      "decode_tps": 83.3,
+      "prompt_ms": 5362.8,
+      "decode_ms": 3073.1,
+      "ttft_s": 5.434,
+      "total_s": 8.44,
+      "drafts_offered": 236,
+      "drafts_accepted": 183,
+      "cpu_lane_pct": null,
+      "engine_log_line": "[server] s1 done  pp=7370/0c 5.4s 1374t/s  tg=256 83.3t/s acc=78%  ttft=5.4s  end=length  hit=89.0%  pcie=0.0%"
+    },
+    {
+      "arm": "6144",
+      "run": 2,
+      "nonce": "1795378410-6144-r2",
+      "target_tokens": 6144,
+      "ok": true,
+      "err": null,
+      "prompt_tokens": 7370,
+      "reused_tokens": 0,
+      "read_tokens": 7370,
+      "generated_tokens": 256,
+      "prompt_tps": 1355.7,
+      "decode_tps": 83.9,
+      "prompt_ms": 5436.2,
+      "decode_ms": 3051.8,
+      "ttft_s": 5.546,
+      "total_s": 8.522,
+      "drafts_offered": 223,
+      "drafts_accepted": 188,
+      "cpu_lane_pct": null,
+      "engine_log_line": "[server] s1 done  pp=7370/0c 5.4s 1356t/s  tg=256 83.9t/s acc=84%  ttft=5.5s  end=length  hit=88.1%  pcie=0.0%"
+    },
+    {
+      "arm": "6144",
+      "run": 3,
+      "nonce": "1795378410-6144-r3",
+      "target_tokens": 6144,
+      "ok": true,
+      "err": null,
+      "prompt_tokens": 7370,
+      "reused_tokens": 0,
+      "read_tokens": 7370,
+      "generated_tokens": 256,
+      "prompt_tps": 1344.8,
+      "decode_tps": 88.4,
+      "prompt_ms": 5480.5,
+      "decode_ms": 2896.1,
+      "ttft_s": 5.603,
+      "total_s": 8.429,
+      "drafts_offered": 219,
+      "drafts_accepted": 193,
+      "cpu_lane_pct": null,
+      "engine_log_line": "[server] s1 done  pp=7370/0c 5.5s 1345t/s  tg=256 88.4t/s acc=88%  ttft=5.6s  end=length  hit=88.8%  pcie=0.0%"
+    },
+    {
+      "arm": "6144",
+      "run": 4,
+      "nonce": "1795378410-6144-r4",
+      "target_tokens": 6144,
+      "ok": true,
+      "err": null,
+      "prompt_tokens": 7370,
+      "reused_tokens": 0,
+      "read_tokens": 7370,
+      "generated_tokens": 256,
+      "prompt_tps": 1334.5,
+      "decode_tps": 88.3,
+      "prompt_ms": 5522.7,
+      "decode_ms": 2898.9,
+      "ttft_s": 5.595,
+      "total_s": 8.427,
+      "drafts_offered": 217,
+      "drafts_accepted": 183,
+      "cpu_lane_pct": null,
+      "engine_log_line": "[server] s1 done  pp=7370/0c 5.5s 1334t/s  tg=256 88.3t/s acc=84%  ttft=5.6s  end=length  hit=89.5%  pcie=0.0%"
+    }
+  ]
+}

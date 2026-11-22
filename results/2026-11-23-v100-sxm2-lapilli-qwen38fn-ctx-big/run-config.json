@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-23",
+  "host": "Omarchy Linux, kernel 7.2.15-1-omarchy, Xeon E5-2673 v3 (24 vCPU), 125 GB RAM",
+  "gpu": "Tesla V100-SXM2-32GB, 32768 MiB, driver 580.178.04, CUDA 12.9 runtime libs in LD_LIBRARY_PATH",
+  "engine": {
+    "name": "lapilli-v100 / basalt",
+    "git_commit": "024d61c",
+    "binary": "/home/omarchy/build/lapilli-v100/bin/basalt",
+    "serve_config": "/home/omarchy/build/lapilli-v100/serve-262k.json",
+    "server_log": "/home/omarchy/build/lapilli-v100/lapilli-serve-262k.log"
+  },
+  "model": {
+    "name": "Qwen3.8-Flash-Next UD-Q4_K_XL",
+    "format": "basalt",
+    "source_repo": "jesdga/Qwen3.8-Flash-Next-Basalt",
+    "file": "/home/omarchy/build/lapilli-v100/models/Qwen3.8-FN-UD-Q4_K_XL.basalt",
+    "size_bytes": 115964116992
+  },
+  "runtime": {
+    "max_context": 262144,
+    "api": "OpenAI-compatible /v1/chat/completions",
+    "thinking": "off (chat_template_kwargs.enable_thinking=false)",
+    "temperature": 0,
+    "max_tokens_cap": 256
+  },
+  "benchmark": {
+    "script": "bench_lapilli_sweep.py",
+    "sizes_target": [
+      32768,
+      65536,
+      131072
+    ],
+    "runs_per_arm": 4,
+    "nonce_prompts": true,
+    "reused_tokens_expected": 0,
+    "timings_source": "engine SSE timings",
+    "ttft_source": "client monotonic clock, first non-empty content"
+  }
+}
