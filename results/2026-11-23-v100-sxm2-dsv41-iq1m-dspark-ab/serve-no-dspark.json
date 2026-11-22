@@ -1,0 +1,25 @@
+﻿{
+  "exe": "/home/omarchy/build/build-dsv41/strata-dsv41",
+  "args": [
+    "--pack", "/mnt/nvme/maya-ds4-iq1m-new",
+    "--gpus", "0",
+    "--max-context", "260000",
+    "--cpu-threads", "20",
+    "--dspark", "off",
+    "--mmap-experts", "off",
+    "--prefill-chunk", "16384",
+    "--vision", "off",
+    "--eos", "1"
+  ],
+  "cwd": "/home/omarchy/build/Strata-0.2.13",
+  "tokenizer": "/mnt/nvme/maya-ds4-iq1m-new/tokenizer",
+  "model_name": "deepseek-v4.1-flash-iq1m",
+  "arch": "deepseek41",
+  "log": "/home/omarchy/build/strata-maya-ds4-iq1m.log",
+  "lib_dirs": ["/usr/local/cuda-12.9/targets/x86_64-linux/lib"],
+  "port": 8080,
+  "host": "0.0.0.0",
+  "lazy_load": false,
+  "idle_unload_s": 0,
+  "open_browser": false
+}

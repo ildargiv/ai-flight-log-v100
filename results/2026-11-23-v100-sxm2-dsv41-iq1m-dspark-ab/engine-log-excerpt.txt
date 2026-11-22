@@ -1,0 +1,8 @@
+# Engine/serve logs on Omarchy (not copied in full)
+# no-DSpark: /home/omarchy/build/strata-maya-ds4-iq1m-serve.log
+# DSpark:    /home/omarchy/build/strata-maya-ds4-iq1m-dspark-serve.log
+# Key observations:
+# - IQ1_M pack required rebuild via tools/dsv41/pack_gguf.py; old maya-ds4 IQ2_XXS pack caused: layers.0.attn.wq_a: read failed
+# - no-DSpark ready: context=260000 kv=fp4 kv_resident=260000 expert_slots=3257 engine_kind=ds4 cpu_experts=12103 ram_experts=12103
+# - DSpark pack includes 3 MTP blocks from dspark-DeepSeek-V4.1-Flash-1017-Q8_0.gguf
+# - All 32 benchmark rows ok, reused_tokens==0
