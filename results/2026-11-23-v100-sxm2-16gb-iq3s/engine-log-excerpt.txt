@@ -1,0 +1,43 @@
+# Выдержка из лога движка, сессия 2026-11-23 (обезличено: пути заменены на <data>/…, hostname убран)
+
+    strata generate: memory guard: limit 90.3 GiB (source: meminfo), current 6.1 GiB, reclaimable cache credited 0.0 GiB; available 84.2 GiB (MemAvailable 84.2 GiB), floor 2560 MiB
+    strata generate: PCIe probe: 13.4 GB/s host->device (best of 13.4 13.4 13.4 13.4) -> pcie_frac 0.37 (default 0.55)
+    strata: the PLE table (26.8 GiB) was not locked in RAM: this program may lock only 0.0 GiB (RLIMIT_MEMLOCK). It still works, with the table's pages faulted in but reclaimable; the lock was measured up to 6% faster in decode (#4671).
+    strata generate: --ple-io ram chosen by the residency policy (the table is 26.8 GiB, the expert arena still to fill 46.8 GiB and 83.6 GiB of RAM is available; STRATA_PLE_AUTO_RAM=0 keeps the direct reads, --ple-io direct forces them)
+    strata generate: PLE table loaded (not locked) (--ple-io ram chosen by the residency policy) in 20.6 s
+    strata generate: GPU 0: Tesla V100-SXM2-16GB, compute capability 7.0
+    strata: expert arena: MAP_HUGETLB unavailable (needed 23983 2 MiB pages, vm.nr_hugepages=0); transparent huge pages NOT requested: only 19 GiB of free 2 MiB blocks for a 46 GiB arena, compaction would stall the load (STRATA_ARENA_THP=1 requests them anyway) (#2126)
+    strata generate: expert arena read through the file cache (buffered (not Windows))
+    strata generate: expert arena: cudaHostRegister PORTABLE ok; MAP_HUGETLB unavailable (...); transparent huge pages NOT requested: only 19 GiB of free 2 MiB blocks for a 46 GiB arena (...)
+    strata generate: loaded 46.84 GiB at 1.64 GiB/s
+    strata generate: expert cache auto: 9.79 GiB free, 700 MiB reserved (+380 MiB for the draft head, +256 MiB for what is allocated after the cache) -> 3422 slots
+    strata generate: expert cache 4447 slots, 8.48 GiB of VRAM; policy is
+    strata generate: session is up (engine 0.1.60)
+    strata dflash2: 106299-token draft head (212.9 MiB), drafter 625 MiB of VRAM (Q4_0 weights)
+    strata dflash2: selector codebooks: Q4_0 rows (about 174 MiB less than bf16)
+    strata serve: conversation cache sized from the free RAM: 8192 MiB for up to 4 parked conversations, so an agent's next turn reuses its prompt (--conversation-cache-mib N sets it, 0 turns it off)
+    strata serve: 790 MiB of VRAM free with everything loaded
+    strata verify: capturing the 1-token window (790 MiB of VRAM free)
+    strata verify: capturing the 8-token window (672 MiB of VRAM free)
+
+Замерные рукава (engine timings, `cache_n = 0`; строки **восстановлены** из полей `timings` ответа API,
+мс пересчитаны из `prompt_n / prompt_per_second`, дословного `prompt N = reused + read` в этот момент
+в логе не сохраняли):
+
+    prompt 4263 tokens = 0 reused + 4263 read in 6832 ms (624.0 tok/s), 76 generated in 1434 ms (53.0 tok/s), drafts accepted 45 of 56
+    prompt 4263 tokens = 0 reused + 4263 read in 6360 ms (670.3 tok/s), 76 generated in 1148 ms (66.2 tok/s), drafts accepted 47 of 56
+    prompt 16991 tokens = 0 reused + 16991 read in 13334 ms (1274.2 tok/s), 65 generated in 1009 ms (64.4 tok/s), drafts accepted 36 of 48
+
+После замеров:
+
+    strata serve: decode expert cache hit rate: 83.3% (27053 hits / 32468 lookups); 961 more read by the GPU over PCIe or from another GPU (2.9% of all 33429 routed)
+    strata serve: KV streaming: 96.03% of 499104 block reads hit VRAM, 79.9 MiB read from RAM
+
+Proof из `environ` живого движка (RULES #9):
+
+    $ tr '\0' '\n' < /proc/$(pgrep -x strata)/environ | grep '^STRATA_'
+    STRATA_HANDOVER=1
+    STRATA_NO_ACQUIRE=1
+    STRATA_RUNTIME_PROFILE=launch-iq3_s-256k
+
+Ни одного из пяти sm_70-ключей (№013/№015/№017) в процессе нет.

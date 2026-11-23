@@ -11,7 +11,7 @@ Find by card, model or memory:
 |---|---|---|---|---|
 | V100 SXM2 32 GB (`10de:1db5`) | 32 GB | 96 GB | Qwen3.8-Flash-Next IQ3_XXS 71 GB, 262k | prefill 1280/1584, decode 72.8/71.9 |
 | V100 PCIe 32 GB | 32 GB | 64 GB | Qwen3.8-Flash-Next IQ3_S 78 GB, 131k | prefill 1220/1538, decode 69.5/66.2 |
-| V100 SXM2 16 GB (`10de:1db1`) | 16 GB | 90 GB | Qwen3.8-Flash-Next IQ3_S 78 GB, 262k | runs; expert-cache hit falls to 62–79% |
+| V100 SXM2 16 GB (`10de:1db1`) | 16 GB | 90 GB | Qwen3.8-Flash-Next IQ3_S 78 GB, 262k | prefill 624/1274, decode 53–66; expert cache 4447 slots, hit 62–79% |
 | V100 SXM2 32 GB (2nd host) | 32 GB | 125 GB | DeepSeek-V4.1-Flash IQ2_XXS 138 GB | prefill 160→627, decode 10–13 |
 
 Measured on 2026-11-05 by **ildargiv**, ongoing. Third card in the fleet line:
@@ -41,6 +41,13 @@ SXM2-32GB, Qwen3.8-Flash-Next IQ3_XXS, 262,144 context, `--kv int8`, bit-exact s
   **580.178.04** — R580 is the last NVIDIA branch with Volta; the `-open` module is Turing+ only.
 - Strata: terminal/app 0.2.10, engine **0.1.57 linux-x86_64-cuda-cuda12** from the signed feed
   (release binaries 404 for the cuda12 asset; the feed carries it). No host CUDA toolkit needed.
+
+> **State as of 2026-11-23 (append, history above is left as it was).** The GPU in this host is now
+> **Tesla V100 SXM2 16 GB** (`10de:1db1`, subsystem `10de:1db1`), not the SXM2-32GB (`10de:1db5`) that
+> entries №001–№018 were measured on; the 32 GB SXM2 in this fleet now sits in the second host
+> (entry №018). Engine is **0.1.60 linux-x86_64-cuda-cuda12**, Control **0.1.61**; RAM 96 GB unchanged
+> (90.3 GiB by meminfo). Consequences and numbers: [entry №019](journal/entries/019.md). The anchor
+> line (V100 SXM2-**32GB**) can no longer be measured on this host until the card goes back.
 
 ## Model and configuration
 
