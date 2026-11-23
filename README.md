@@ -1,4 +1,18 @@
-# AI Flight Log — Tesla V100 SXM2 32 GB (Volta, sm_70)
+# Run AI models on a Tesla V100 (SXM2 32 GB / PCIe 32 GB / SXM2 16 GB, Volta sm_70) — flight log
+
+**Run this if you are putting an LLM on a V100 for the first time.** Working settings to copy:
+[`WORKING.md`](WORKING.md). Things already measured that do not work, so you skip them:
+[`DEAD-ENDS.md`](DEAD-ENDS.md). Numbers by card / model / memory:
+[`journal/INDEX.md`](journal/INDEX.md).
+
+Find by card, model or memory:
+
+| Card | VRAM | RAM | Model + quant that runs here | Measured (engine timings) |
+|---|---|---|---|---|
+| V100 SXM2 32 GB (`10de:1db5`) | 32 GB | 96 GB | Qwen3.8-Flash-Next IQ3_XXS 71 GB, 262k | prefill 1280/1584, decode 72.8/71.9 |
+| V100 PCIe 32 GB | 32 GB | 64 GB | Qwen3.8-Flash-Next IQ3_S 78 GB, 131k | prefill 1220/1538, decode 69.5/66.2 |
+| V100 SXM2 16 GB (`10de:1db1`) | 16 GB | 90 GB | Qwen3.8-Flash-Next IQ3_S 78 GB, 262k | runs; expert-cache hit falls to 62–79% |
+| V100 SXM2 32 GB (2nd host) | 32 GB | 125 GB | DeepSeek-V4.1-Flash IQ2_XXS 138 GB | prefill 160→627, decode 10–13 |
 
 Measured on 2026-11-05 by **ildargiv**, ongoing. Third card in the fleet line:
 [rtx3060-strata-tuning](https://github.com/ildargiv/rtx3060-strata-tuning) →
@@ -11,9 +25,10 @@ V100; one context length is enough, and a failed run is a valid entry.
 
 This repo is a **flight log**, not a one-shot benchmark: dated entries, append-only, and a failed
 measurement is a first-class entry with the same rank as a passing one. Rules:
-[[`RULES.md`](RULES.md), template: [[`TEMPLATE.md`](TEMPLATE.md),
-index + machine-readable feed: [`journal/README.md`](journal/README.md) /
-[[`journal/feed.jsonl`](journal/feed.jsonl). Anchor line (comparable over time): one V100
+[`RULES.md`](RULES.md), template: [`TEMPLATE.md`](TEMPLATE.md),
+index + machine-readable feed: [`journal/INDEX.md`](journal/INDEX.md) /
+[`journal/README.md`](journal/README.md) / [`journal/feed.jsonl`](journal/feed.jsonl).
+Anchor line (comparable over time): one V100
 SXM2-32GB, Qwen3.8-Flash-Next IQ3_XXS, 262,144 context, `--kv int8`, bit-exact sm_70 switches on.
 
 ## Hardware and software
