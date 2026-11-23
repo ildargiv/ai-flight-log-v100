@@ -1,0 +1,7 @@
+model=inkling-2-mini-ud-iq1s-mainline
+model_file=/home/omarchy/Models/_tmp/Inkling-2-Mini-UD-IQ1_S-mainline.gguf
+engine=llama-server b12648 (CUDA 12.8)
+gpu=Tesla V100-SXM2-32GB 32GB sm_70
+host=Omarchy Linux 7.2.15-1-omarchy, Xeon E5-2673 v3, 125GB RAM
+launch=llama-server -m /home/omarchy/Models/_tmp/Inkling-2-Mini-UD-IQ1_S-mainline.gguf -ngl 99 -c 32768 --host 0.0.0.0 --port 8081 --alias inkling-2-mini-ud-iq1s-mainline --jinja
+benchmark=inkling_smoke.py; arms=1024,4096,16384; runs=3; max_tokens=128; temperature=0; stream=false; fresh nonce per request; warmup excluded
