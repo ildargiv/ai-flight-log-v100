@@ -1,0 +1,317 @@
+﻿[server] legend   pp=prompt read  tg=generation  c=cached  acc=drafts accepted  dl=tokens per window  hit=expert cache  pcie=routed experts over PCIe
+[server] Inkling-2-Mini  kv=fp16 reserve=700MiB ctx=65536 spec=8 temp=1.0 vision=gpu0
+[server] engine log: /home/omarchy/.cache/basalt/2b08fb19f5761911/engine.log
+[server] ready    http://127.0.0.1:8080/v1  openai+anthropic  stats http://127.0.0.1:8080/
+[server] network  http://192.168.31.111:8080/v1
+[server] network  http://100.110.204.3:8080/v1
+[server] warning  no api key, open to the network (--api-key KEY)
+[server] planning weight allocation
+[server] placed   ram 1.0GiB 0.5s
+[server] loading model weights [==============>         ]  10.3/17.1 GiB  575 MB/s
+[server] placed   cuda0 16.2GiB 30.3s
+[server] loaded   17.1GiB 31.2s  cuda0=16.2GiB ram=0.9GiB
+[server] weights  loaded, ctx=65536 images=on
+[server] thinking budget 16 tokens, output cap 32 (answer-room auto)
+[server] thinking budget reached (16 tokens), wrapping up
+[server] s1 done  pp=23/0c 0.2s  tg=26 103.8t/s acc=86% dl=2.3  ttft=0.2s  end=stop  hit=100.0%  pcie=0.0%
+[server] thinking budget 64 tokens, output cap 128 (answer-room auto)
+[server] s1 done  pp=122/0c 0.3s  tg=75 157.1t/s acc=83% dl=3.4  ttft=0.3s  end=stop  hit=100.0%  pcie=0.0%
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=51/8192 | total 0t/s
+[server] s1 done  pp=597/0c 0.6s 1031t/s  tg=166 113.8t/s acc=59% dl=2.1  ttft=0.6s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (392413 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=392413/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=55/8192 | total 0t/s
+[server] live | s1 tg=283/8192 113.7t/s | total 114t/s
+[server] s1 done  pp=490/0c 0.5s  tg=476 117.1t/s acc=62% dl=2.2  ttft=0.5s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (392973 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=392973/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=21/8192 | total 0t/s
+[server] live | s1 tg=254/8192 114.4t/s | total 114t/s
+[server] live | s1 tg=580/8192 136.4t/s | total 136t/s
+[server] live | s1 tg=621/8192 76.2t/s | total 76t/s
+[server] live | s1 tg=731/8192 12.8t/s | total 13t/s
+[server] s1 done  pp=979/0c 0.8s 1235t/s  tg=782 142.1t/s acc=76% dl=3.1  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393279 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393279/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=17/8192 | total 0t/s
+[server] live | s1 tg=286/8192 129.9t/s | total 130t/s
+[server] live | s1 tg=607/8192 143.8t/s | total 144t/s
+[server] s1 done  pp=1049/0c 0.8s 1284t/s  tg=726 147.7t/s acc=73% dl=3.4  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393223 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393223/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=25/8192 | total 0t/s
+[server] live | s1 tg=280/8192 125.2t/s | total 125t/s
+[server] s1 done  pp=1055/0c 0.8s 1344t/s  tg=556 156.5t/s acc=82% dl=3.4  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393053 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393053/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=19/8192 | total 0t/s
+[server] live | s1 tg=279/8192 126.7t/s | total 127t/s
+[server] live | s1 tg=629/8192 148.2t/s | total 148t/s
+[server] s1 done  pp=1047/0c 0.8s 1297t/s  tg=701 152.8t/s acc=78% dl=3.4  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393198 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393198/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=26/8192 | total 0t/s
+[server] live | s1 tg=355/8192 158.3t/s | total 158t/s
+[server] s1 done  pp=1050/0c 0.8s 1339t/s  tg=600 163.8t/s acc=81% dl=3.8  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393097 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393097/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=23/8192 | total 0t/s
+[server] live | s1 tg=304/8192 137.8t/s | total 138t/s
+[server] s1 done  pp=1094/0c 0.8s 1371t/s  tg=637 174.0t/s acc=86% dl=4.2  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393134 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393134/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=130/8192 132.2t/s | total 132t/s
+[server] live | s1 tg=420/8192 138.7t/s | total 139t/s
+[server] s1 done  pp=1094/1093c 0.0s  tg=499 146.9t/s acc=73% dl=3.3  ttft=0.0s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (392996 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=392996/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=25/8192 | total 0t/s
+[server] s1 done  pp=1051/0c 0.8s 1304t/s  tg=347 175.6t/s acc=88% dl=4.1  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (392844 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=392844/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=24/8192 | total 0t/s
+[server] live | s1 tg=293/8192 107.1t/s | total 107t/s
+[server] s1 done  pp=1026/0c 0.8s 1338t/s  tg=509 171.6t/s acc=88% dl=3.9  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393006 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393006/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=26/8192 | total 0t/s
+[server] live | s1 tg=308/8192 137.5t/s | total 138t/s
+[server] s1 done  pp=1043/0c 0.8s 1336t/s  tg=585 167.4t/s acc=85% dl=3.8  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393082 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393082/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=118/8192 119.8t/s | total 120t/s
+[server] live | s1 tg=365/8192 120.9t/s | total 121t/s
+[server] s1 done  pp=1043/1042c 0.0s  tg=576 143.1t/s acc=76% dl=3.0  ttft=0.0s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393073 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393073/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=24/8192 | total 0t/s
+[server] live | s1 tg=349/8192 155.3t/s | total 155t/s
+[server] s1 done  pp=1050/0c 0.8s 1340t/s  tg=484 169.7t/s acc=84% dl=4.0  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (392981 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=392981/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=26/8192 | total 0t/s
+[server] live | s1 tg=294/8192 94.0t/s | total 94t/s
+[server] s1 done  pp=1050/0c 0.8s 1341t/s  tg=348 193.4t/s acc=90% dl=5.1  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (392845 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=392845/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=118/8192 121.5t/s | total 121t/s
+[server] live | s1 tg=406/8192 136.3t/s | total 136t/s
+[server] s1 done  pp=1050/1049c 0.0s  tg=705 161.9t/s acc=80% dl=3.8  ttft=0.0s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393202 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393202/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=26/8192 | total 0t/s
+[server] live | s1 tg=305/8192 136.7t/s | total 137t/s
+[server] s1 done  pp=1050/0c 0.8s 1339t/s  tg=598 167.3t/s acc=82% dl=3.9  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393095 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393095/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=18/8192 | total 0t/s
+[server] live | s1 tg=306/8192 138.7t/s | total 139t/s
+[server] s1 done  pp=1051/0c 0.8s 1289t/s  tg=549 162.6t/s acc=81% dl=3.7  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393046 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393046/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=24/8192 | total 0t/s
+[server] live | s1 tg=313/8192 139.5t/s | total 140t/s
+[server] s1 done  pp=1047/0c 0.8s 1338t/s  tg=616 162.6t/s acc=84% dl=3.6  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393113 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393113/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=27/8192 | total 0t/s
+[server] live | s1 tg=371/8192 163.0t/s | total 163t/s
+[server] s1 done  pp=1049/0c 0.8s 1354t/s  tg=505 176.0t/s acc=86% dl=4.2  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393002 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393002/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=158/8192 162.4t/s | total 162t/s
+[server] live | s1 tg=484/8192 160.9t/s | total 161t/s
+[server] s1 done  pp=1049/1048c 0.0s  tg=590 171.1t/s acc=88% dl=3.9  ttft=0.0s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393087 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393087/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=19/8192 | total 0t/s
+[server] live | s1 tg=335/8192 150.5t/s | total 151t/s
+[server] s1 done  pp=1049/0c 0.8s 1285t/s  tg=512 170.8t/s acc=83% dl=4.1  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393009 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393009/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=161/8192 165.1t/s | total 165t/s
+[server] live | s1 tg=437/8192 146.4t/s | total 146t/s
+[server] s1 done  pp=1049/1048c 0.0s  tg=718 169.9t/s acc=84% dl=4.0  ttft=0.0s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393215 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393215/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=24/8192 | total 0t/s
+[server] live | s1 tg=301/8192 135.6t/s | total 136t/s
+[server] live | s1 tg=613/8192 145.0t/s | total 145t/s
+[server] s1 done  pp=1051/0c 0.8s 1344t/s  tg=761 157.3t/s acc=84% dl=3.3  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393258 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393258/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=163/8192 167.6t/s | total 168t/s
+[server] s1 done  pp=1051/1050c 0.0s  tg=511 170.9t/s acc=85% dl=4.0  ttft=0.0s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393008 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393008/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=21/8192 | total 0t/s
+[server] s1 done  pp=1078/0c 0.8s 1316t/s  tg=401 184.8t/s acc=88% dl=4.6  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (392898 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=392898/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=147/8192 147.6t/s | total 148t/s
+[server] s1 done  pp=1078/1077c 0.0s  tg=381 191.1t/s acc=90% dl=4.9  ttft=0.0s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (392878 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=392878/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=119/8192 120.6t/s | total 121t/s
+[server] live | s1 tg=393/8192 131.0t/s | total 131t/s
+[server] s1 done  pp=1078/1077c 0.0s  tg=574 150.8t/s acc=78% dl=3.3  ttft=0.0s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393071 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393071/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=33/8192 | total 0t/s
+[server] live | s1 tg=388/8192 171.6t/s | total 172t/s
+[server] live | s1 tg=690/8192 160.4t/s | total 160t/s
+[server] live | s1 tg=1017/8192 160.8t/s | total 161t/s
+[server] s1 done  pp=1076/0c 0.8s 1362t/s  tg=1306 170.1t/s acc=84% dl=4.1  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393803 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393803/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=22/8192 | total 0t/s
+[server] live | s1 tg=303/8192 137.2t/s | total 137t/s
+[server] s1 done  pp=1102/0c 0.8s 1377t/s  tg=589 167.0t/s acc=80% dl=4.1  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393086 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393086/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=17/8192 | total 0t/s
+[server] live | s1 tg=313/8192 143.4t/s | total 143t/s
+[server] live | s1 tg=582/8192 138.5t/s | total 139t/s
+[server] s1 done  pp=1064/0c 0.8s 1294t/s  tg=952 153.9t/s acc=78% dl=3.4  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393449 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393449/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=22/8192 | total 0t/s
+[server] s1 done  pp=1067/0c 0.8s 1310t/s  tg=359 196.4t/s acc=92% dl=5.1  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (392856 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=392856/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=114/8192 117.0t/s | total 117t/s
+[server] s1 done  pp=1067/1066c 0.0s  tg=474 167.2t/s acc=86% dl=3.8  ttft=0.0s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (392971 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=392971/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=24/8192 | total 0t/s
+[server] live | s1 tg=331/8192 148.3t/s | total 148t/s
+[server] s1 done  pp=1116/0c 0.8s 1385t/s  tg=605 178.7t/s acc=87% dl=4.4  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393102 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393102/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=124/8192 125.2t/s | total 125t/s
+[server] s1 done  pp=1116/1115c 0.0s  tg=456 186.8t/s acc=87% dl=4.8  ttft=0.0s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (392953 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=392953/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=18/8192 | total 0t/s
+[server] s1 done  pp=1119/0c 0.8s 1389t/s  tg=421 198.0t/s acc=92% dl=5.2  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (392918 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=392918/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=117/8192 119.1t/s | total 119t/s
+[server] live | s1 tg=532/8192 176.9t/s | total 177t/s
+[server] s1 done  pp=1119/1118c 0.0s  tg=551 176.9t/s acc=89% dl=4.1  ttft=0.0s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393048 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393048/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=111/8192 113.7t/s | total 114t/s
+[server] live | s1 tg=470/8192 155.7t/s | total 156t/s
+[server] s1 done  pp=1119/1118c 0.0s  tg=710 169.6t/s acc=81% dl=4.2  ttft=0.0s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393207 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393207/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=21/8192 | total 0t/s
+[server] live | s1 tg=401/8192 179.7t/s | total 180t/s
+[server] s1 done  pp=1115/0c 0.8s 1386t/s  tg=456 181.8t/s acc=86% dl=4.6  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (392953 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=392953/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=123/8192 126.5t/s | total 127t/s
+[server] s1 done  pp=1115/1114c 0.0s  tg=501 178.3t/s acc=90% dl=4.1  ttft=0.0s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (392998 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=392998/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=137/8192 138.5t/s | total 138t/s
+[server] s1 done  pp=1115/1114c 0.0s  tg=452 192.3t/s acc=90% dl=5.0  ttft=0.0s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (392949 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=392949/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=140/8192 143.2t/s | total 143t/s
+[server] live | s1 tg=233/8192 75.6t/s | total 76t/s
+[server] s1 done  pp=1115/1114c 0.0s  tg=445 187.9t/s acc=93% dl=4.5  ttft=0.0s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (392942 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=392942/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=23/8192 | total 0t/s
+[server] live | s1 tg=386/8192 176.5t/s | total 177t/s
+[server] s1 done  pp=1133/0c 0.8s 1393t/s  tg=564 188.7t/s acc=88% dl=4.9  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393061 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393061/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=113/8192 116.1t/s | total 116t/s
+[server] s1 done  pp=1133/1132c 0.0s  tg=457 188.6t/s acc=92% dl=4.8  ttft=0.0s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (392954 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=392954/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=116/8192 118.4t/s | total 118t/s
+[server] live | s1 tg=384/8192 128.2t/s | total 128t/s
+[server] live | s1 tg=737/8192 146.0t/s | total 146t/s
+[server] s1 done  pp=1133/1132c 0.0s  tg=905 150.6t/s acc=75% dl=3.4  ttft=0.0s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393402 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393402/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=22/8192 | total 0t/s
+[server] live | s1 tg=355/8192 158.7t/s | total 159t/s
+[server] s1 done  pp=1107/0c 0.8s 1379t/s  tg=501 176.1t/s acc=90% dl=4.0  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (392998 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=392998/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=120/8192 120.8t/s | total 121t/s
+[server] s1 done  pp=1107/1106c 0.0s  tg=475 180.8t/s acc=87% dl=4.4  ttft=0.0s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (392972 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=392972/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=158/8192 160.5t/s | total 160t/s
+[server] s1 done  pp=1107/1106c 0.0s  tg=526 184.2t/s acc=87% dl=4.6  ttft=0.0s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393023 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393023/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=19/8192 | total 0t/s
+[server] live | s1 tg=410/8192 186.8t/s | total 187t/s
+[server] s1 done  pp=1113/0c 0.8s 1343t/s  tg=460 188.8t/s acc=91% dl=4.7  ttft=0.8s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (392957 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=392957/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=111/8192 114.3t/s | total 114t/s
+[server] live | s1 tg=476/8192 158.7t/s | total 159t/s
+[server] s1 done  pp=1113/1112c 0.0s  tg=541 163.9t/s acc=82% dl=3.8  ttft=0.0s  end=stop  hit=100.0%  pcie=0.0%
+[server] error: engine reported request exceeds the context window: prompt (393038 tokens) + max tokens (8192) exceeds the context (65536); requests are never truncated. Send a smaller max_tokens (at most 0 here), or start the server with --fit-max-tokens (or set "fit-max-tokens": true in the "server" section of the --config file) to shorten it to the room left
+[server] s1 done  pp=393038/0c  tg=0  end=error
+[server] thinking budget 6144 tokens, output cap 8192 (answer-room auto)
+[server] live | s1 tg=21/8192 | total 0t/s
+[server] live | s1 tg=327/8192 147.6t/s | total 148t/s

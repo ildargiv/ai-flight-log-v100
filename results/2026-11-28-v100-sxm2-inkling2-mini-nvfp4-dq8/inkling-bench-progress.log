@@ -1,0 +1,39 @@
+basalt-bench: starting bin/basalt (log: /home/omarchy/inkling-bench-logs/engine.log)
+basalt-bench: loading 17.1 GiB
+basalt-bench: loading 6.4 / 17.1 GiB (37%)
+basalt-bench: loading 11.7 / 17.1 GiB (68%)
+basalt-bench: loading 16.9 / 17.1 GiB (98%)
+basalt-bench: loading weights 17.1 / 17.1 GiB done (30 s)
+basalt-bench: engine ready in 32 s
+  run 1 conv    120.2 tok/s, 1200 tokens
+  run 1 struct  221.0 tok/s, 8192 tokens
+  run 1 prose   101.5 tok/s, 981 tokens
+  run 1 pp16384 15810 tokens, 1415 t/s engine, 1413 t/s wall
+  run 1 pp32768 31603 tokens, 1344 t/s engine, 1343 t/s wall
+  run 1 pp32768 then 64 tokens written at 90.5 tok/s
+  run 1 pp65536 63189 tokens, 1222 t/s engine, 1221 t/s wall
+  run 1 pp65536 then 64 tokens written at 78.2 tok/s
+  run 2 conv    121.9 tok/s, 1200 tokens
+  run 2 struct  214.8 tok/s, 8192 tokens
+  run 2 prose   101.9 tok/s, 981 tokens
+  run 2 pp16384 15810 tokens, 1434 t/s engine, 1432 t/s wall
+  run 2 pp32768 31603 tokens, 1360 t/s engine, 1359 t/s wall
+  run 2 pp32768 then 64 tokens written at 93.4 tok/s
+  run 2 pp65536 63189 tokens, 1217 t/s engine, 1217 t/s wall
+  run 2 pp65536 then 64 tokens written at 75.3 tok/s
+  run 3 conv    121.2 tok/s, 1200 tokens
+  run 3 struct  214.1 tok/s, 8192 tokens
+  run 3 prose   101.3 tok/s, 981 tokens
+  run 3 pp16384 15810 tokens, 1425 t/s engine, 1423 t/s wall
+  run 3 pp32768 31603 tokens, 1350 t/s engine, 1349 t/s wall
+  run 3 pp32768 then 64 tokens written at 88.2 tok/s
+  run 3 pp65536 63189 tokens, 1214 t/s engine, 1213 t/s wall
+  run 3 pp65536 then 64 tokens written at 77.9 tok/s
+  run 4 conv    121.5 tok/s, 1200 tokens
+  run 4 struct  213.0 tok/s, 8192 tokens
+  run 4 prose   101.8 tok/s, 981 tokens
+  run 4 pp16384 15810 tokens, 1433 t/s engine, 1431 t/s wall
+  run 4 pp32768 31603 tokens, 1353 t/s engine, 1352 t/s wall
+  run 4 pp32768 then 64 tokens written at 83.2 tok/s
+  run 4 pp65536 63189 tokens, 1219 t/s engine, 1218 t/s wall
+  run 4 pp65536 then 64 tokens written at 78.4 tok/s

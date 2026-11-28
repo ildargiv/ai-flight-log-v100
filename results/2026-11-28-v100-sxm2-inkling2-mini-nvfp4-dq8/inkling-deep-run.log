@@ -1,0 +1,22 @@
+=== STOP SERVER Sat Nov 28 18:41:15 UTC 2026 ===
+PORT_FREE
+=== DEEP BENCH START Sat Nov 28 18:41:18 UTC 2026 ===
+=== DEEP BENCH DONE Sat Nov 28 19:34:42 UTC 2026 RC=0 ===
+JSON_BYTES=2831
+  run 1 pp131072 126361 tokens, 1030 t/s engine, 1029 t/s wall
+  run 1 pp131072 then 64 tokens written at 57.7 tok/s
+  run 1 pp262144 252705 tokens, 681 t/s engine, 681 t/s wall
+  run 1 pp262144 then 64 tokens written at 44.6 tok/s
+  run 1 pp524288 505393 tokens, 467 t/s engine, 467 t/s wall
+  run 1 pp524288 then 64 tokens written at 26.3 tok/s
+  run 2 pp131072 126361 tokens, 1008 t/s engine, 1008 t/s wall
+  run 2 pp131072 then 64 tokens written at 61.7 tok/s
+  run 2 pp262144 252705 tokens, 678 t/s engine, 678 t/s wall
+  run 2 pp262144 then 64 tokens written at 48.4 tok/s
+  run 2 pp524288 505393 tokens, 466 t/s engine, 466 t/s wall
+  run 2 pp524288 then 64 tokens written at 25.7 tok/s
+=== RESTART SERVER Sat Nov 28 19:34:42 UTC 2026 ===
+SERVER_PID=29277
+READY=1 WAIT=50s
+READY=1
+LISTEN 0      256                                 127.0.0.1:8080       0.0.0.0:*    users:(("python",pid=29277,fd=16))

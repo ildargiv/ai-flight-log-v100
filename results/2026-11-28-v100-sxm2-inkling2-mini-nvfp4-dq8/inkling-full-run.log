@@ -1,0 +1,28 @@
+=== STOP SERVER Sat Nov 28 15:22:13 UTC 2026 ===
+PORT_FREE
+433 MiB
+=== BENCH START Sat Nov 28 15:22:15 UTC 2026 ===
+=== BENCH DONE Sat Nov 28 15:32:33 UTC 2026 RC=0 ===
+JSON_BYTES=12299
+  run 4 conv    121.5 tok/s, 1200 tokens
+  run 4 struct  213.0 tok/s, 8192 tokens
+  run 4 prose   101.8 tok/s, 981 tokens
+  run 4 pp16384 15810 tokens, 1433 t/s engine, 1431 t/s wall
+  run 4 pp32768 31603 tokens, 1353 t/s engine, 1352 t/s wall
+  run 4 pp32768 then 64 tokens written at 83.2 tok/s
+  run 4 pp65536 63189 tokens, 1219 t/s engine, 1218 t/s wall
+  run 4 pp65536 then 64 tokens written at 78.4 tok/s
+JSON_OK keys: ['build_type', 'commit', 'cuda_driver', 'cuda_toolkit', 'driver', 'engine_args', 'engine_info', 'engine_version', 'gpus', 'lossy', 'model', 'peer_tier']
+=== RESTART SERVER Sat Nov 28 15:32:33 UTC 2026 ===
+SERVER_PID=14411
+READY=1 WAIT=50s
+READY=1
+[server] engine log: /home/omarchy/.cache/basalt/2b08fb19f5761911/engine.log
+[server] ready    http://127.0.0.1:8080/v1  openai+anthropic  stats http://127.0.0.1:8080/
+[server] planning weight allocation
+[server] placed   ram 1.0GiB 0.5s
+[server] loading model weights [==============>         ]  10.5/17.1 GiB  576 MB/s
+[server] placed   cuda0 16.2GiB 30.2s
+[server] loaded   17.1GiB 31.0s  cuda0=16.2GiB ram=0.9GiB
+[server] weights  loaded, ctx=65536 images=on
+LISTEN 0      256                                 127.0.0.1:8080       0.0.0.0:*    users:(("python",pid=14411,fd=16))
