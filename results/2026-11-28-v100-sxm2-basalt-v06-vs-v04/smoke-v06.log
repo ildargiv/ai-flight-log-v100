@@ -1,0 +1,34 @@
+[server] legend   pp=prompt read  tg=generation  c=cached  acc=drafts accepted  dl=tokens per window  hit=expert cache  pcie=routed experts over PCIe
+[server] Qwen3.8-Flash-Next UD-Q4_K_XL  ctx=262144 spec=8 temp=1.0 top_p=0.95 top_k=20 vision=gpu0
+[server] engine log: /home/omarchy/.cache/basalt/9d857ba6311ace55/engine.log
+[server] totals   persistent, /home/omarchy/build/lapilli-v100/serve-262k.totals.json
+[server] ready    http://127.0.0.1:8080/v1  openai+anthropic  stats http://127.0.0.1:8080/
+[server] network  http://192.168.31.111:8080/v1
+[server] network  http://100.110.204.3:8080/v1
+[server] warning  no api key, open to the network (--api-key KEY)
+[server] warning: this CPU has no AVX-512: the expert kernels run on AVX-2 (multi-token for the i-quant gate/up rows)
+[server] planning weight allocation
+[server] auto     ram-experts=71.7GB pool-affinity=auto pool=11
+[server] loading model weights [===>                    ]  10.2/77.5 GiB  547 MB/s
+[server] loading model weights [======>                 ]  20.7/77.5 GiB  568 MB/s
+[server] loading model weights [=========>              ]  30.5/77.5 GiB  374 MB/s
+[server] loading model weights [===========>            ]  37.6/77.5 GiB  363 MB/s
+[server] loading model weights [=============>          ]  44.6/77.5 GiB  416 MB/s
+[server] loading model weights [===============>        ]  51.6/77.5 GiB  334 MB/s
+[server] loading model weights [==================>     ]  58.7/77.5 GiB  386 MB/s
+[server] loading model weights [====================>   ]  65.8/77.5 GiB  368 MB/s
+[server] loading model weights [======================> ]  73.1/77.5 GiB  382 MB/s
+[server] placed   ram 48.6GiB 189.7s
+[server] placed   cuda0 28.8GiB 191.2s
+[server] warning: mid_chain: device not covered (80 SMs, 98304 B optin smem; need 16, 101376): the unfused kernels run
+[server] warning: fallback: GDN qkv + z without dense_tc_pair (types 8 / 8)
+[server] loaded   77.5GiB 192.6s  cuda0=28.8GiB ram=48.7GiB
+[server] kv       1.0/7.1GiB cuda0 elastic
+[server] weights  loaded, ctx=262144 images=on
+[server] video    on, FFmpeg 9 (libavformat 63.1.102) from /usr/lib/libavformat.so.63
+[server] thinking budget 32 tokens, output cap 64 (answer-room auto)
+[server] live | s1 tg=1/64 | total 0t/s
+[server] thinking budget reached (32 tokens), wrapping up
+[server] s1 done  pp=61/0c 1.0s  tg=41 38.1t/s acc=100% dl=3.5  ttft=1.1s  end=stop  hit=62.7%  pcie=0.0%
+[server] stopping (Ctrl+C again to force)
+[server] stopped

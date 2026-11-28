@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-28",
+  "host": "omarchy",
+  "hardware": {
+    "gpu": "Tesla V100-SXM2-32GB",
+    "vram_gib": 32,
+    "cpu": "Xeon E5-2673 v3, 24 cores",
+    "ram_gib": 125,
+    "driver": "580.178.04",
+    "cuda": "12.9.86",
+    "power_limit_w": 300
+  },
+  "model": {
+    "file": "Qwen3.8-FN-UD-Q4_K_XL.basalt",
+    "alias": "Qwen3.8-Flash-Next UD-Q4_K_XL",
+    "file_bytes": 108000000000,
+    "loaded_gib": 77.5,
+    "vram_gib": 28.8,
+    "ram_gib": 48.7,
+    "service_context": 262144,
+    "bench_context": 133249
+  },
+  "engines": {
+    "new": {
+      "binary": "bin/basalt",
+      "size_bytes": 267098224,
+      "git_commit": "6f0a1e6b",
+      "build": "v0.6.0-v100.1 / CUDA 12.9 / gcc-14 / sm_70 / BASALT_MODELS=qwen4exp"
+    },
+    "old": {
+      "binary": "bin/basalt.v0.4.backup",
+      "size_bytes": 245322816
+    }
+  },
+  "method": {
+    "scheme": "ABBA",
+    "arms": ["A1 new", "B1 old", "B2 old", "A2 new"],
+    "repetitions_per_arm": 1,
+    "seed": 1,
+    "decode_fixtures": ["conv", "struct", "prose"],
+    "prefill_depths": [16384, 32768, 65536, 131072],
+    "cold_restart_between_arms": true
+  },
+  "prefill_tok_s": {
+    "pp16384": {"A1": 1434, "B1": 1434, "B2": 1439, "A2": 1441, "mean_new": 1437.5, "mean_old": 1436.5},
+    "pp32768": {"A1": 1465, "B1": 1472, "B2": 1468, "A2": 1466, "mean_new": 1465.5, "mean_old": 1470.0},
+    "pp65536": {"A1": 1458, "B1": 1459, "B2": 1457, "A2": 1455, "mean_new": 1456.5, "mean_old": 1458.0},
+    "pp131072": {"A1": 1329, "B1": 1332, "B2": 1332, "A2": 1331, "mean_new": 1330.0, "mean_old": 1332.0}
+  },
+  "decode_tok_s": {
+    "conv": {"A1": 68.4, "B1": 67.1, "B2": 67.1, "A2": 68.4, "mean_new": 68.4, "mean_old": 67.1},
+    "struct": {"A1": 146.8, "B1": 145.4, "B2": 145.4, "A2": 146.7, "mean_new": 146.8, "mean_old": 145.4},
+    "prose": {"A1": 72.2, "B1": 72.5, "B2": 72.5, "A2": 72.1, "mean_new": 72.2, "mean_old": 72.5}
+  },
+  "draft_acceptance_pct": {
+    "new": {"conv": 68.2, "struct": 98.0, "prose": 63.7},
+    "old": {"conv": 67.5, "struct": 97.7, "prose": 65.3}
+  },
+  "draft_length": {
+    "new": {"conv": 2.20, "struct": 6.92, "prose": 1.78},
+    "old": {"conv": 2.00, "struct": 6.92, "prose": 1.83}
+  },
+  "engine_ready_s": {"A1": 197, "B1": 184},
+  "smoke": {
+    "endpoint": "http://127.0.0.1:8080/v1/chat/completions",
+    "answer": "PONG v06",
+    "load_s": 192.6,
+    "ready_s": 230,
+    "prompt_tokens": 61,
+    "prompt_tok_s": 63.6,
+    "completion_tokens": 41,
+    "decode_tok_s": 38.1,
+    "ttft_s": 1.1,
+    "drafts_accepted": "7/7",
+    "expert_hit_pct": 62.7,
+    "pcie_pct": 0.0
+  },
+  "conclusion": "No regression and no proven win: all deltas within noise (RULES #5). Not the anchor; needs n>=4 decode repeats and a rebuild with inkling2/hy4flash."
+}

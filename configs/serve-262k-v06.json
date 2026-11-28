@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "server": {
+    "host": "0.0.0.0",
+    "port": 8080
+  },
+  "engine": {
+    "max-context": 262144
+  },
+  "models": [
+    {
+      "model": "/home/omarchy/build/lapilli-v100/models/Qwen3.8-FN-UD-Q4_K_XL.basalt",
+      "alias": "Qwen3.8-Flash-Next UD-Q4_K_XL"
+    }
+  ]
+}
