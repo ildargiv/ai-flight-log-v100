@@ -13,7 +13,7 @@
   "model": {
     "file": "Qwen3.8-FN-UD-Q4_K_XL.basalt",
     "alias": "Qwen3.8-Flash-Next UD-Q4_K_XL",
-    "file_bytes": 108000000000,
+    "file_size_approx": "~108 GB (точный размер в этой записи не зафиксирован)",
     "loaded_gib": 77.5,
     "vram_gib": 28.8,
     "ram_gib": 48.7,
